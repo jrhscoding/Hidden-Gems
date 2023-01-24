@@ -1,33 +1,38 @@
 /* Homepage Styling */
 * {
-  font-family:Georgia, 'Times New Roman', Times, serif,
+  font-family: Georgia, 'Times New Roman', Times, serif,
 }
+
 h4 {
-  font-weight:800,
+  font-weight: 800,
 }
+
 /* Header Styling */
-h3{
-  font-weight:800;
+h3 {
+  font-weight: 800;
   color: white;
 }
+
 p {
   font-weight: 700;
   font-size: 15pt;
 
 }
+
 .paddingfix {
-  padding-bottom:100px;
+  padding-bottom: 100px;
 }
 
 /* Navbar Styling */
 h1 {
-  font-weight:800;
+  font-weight: 800;
 }
+
 a.nav-link {
   margin-bottom: 10;
   padding-left: 10;
   margin-top: 12px;
-  font-weight:900;
+  font-weight: 900;
   font-size: 25px;
   color: rgb(17, 60, 32)
 }
@@ -35,7 +40,7 @@ a.nav-link {
 /* React App Styling (comes with package) */
 .App {
   text-align: center;
-} 
+}
 
 .App-logo {
   height: 40vmin;
@@ -67,6 +72,7 @@ a.nav-link {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -76,10 +82,12 @@ a.nav-link {
 body {
   margin: 0;
   padding: 0;
-  height:1000px;
+  height: 1000px;
   background-color: #a6acaa;
-  
-
- }
 
 
+}
+
+.image {
+  width: 100%;
+}
