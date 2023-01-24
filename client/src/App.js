@@ -24,6 +24,12 @@ import Homepage from './pages/Homepage'
 // Utils 
 import Auth from './utils/auth'
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 })
@@ -47,24 +53,34 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="paddingfix">
-        <Navbar className="ms-auto" />
 
-        {Auth.loggedIn() ? (
-          <>
-            <section>
-              <Dashboard></Dashboard>
-            </section>
-          </>
-        ) : (
-          <>
-            <main>
-              <Homepage></Homepage>
+        <Router>
+
+          <Navbar className="ms-auto" />
+          <Routes>
+            <Route
+              path="/login"
+              element={<Login />}
+            />
+          </Routes>
+
+          {Auth.loggedIn() ? (
+            <>
               <section>
-                <Login></Login>
+                <Dashboard></Dashboard>
               </section>
-            </main>
-          </>
-        )}
+            </>
+          ) : (
+            <>
+              <main>
+                <Homepage></Homepage>
+                <section>
+                  <Login></Login>
+                </section>
+              </main>
+            </>
+          )}
+        </Router>
       </div>
       <div>
         <Footer />

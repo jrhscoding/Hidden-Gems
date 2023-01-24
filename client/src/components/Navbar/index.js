@@ -4,6 +4,8 @@ import Auth from '../../utils/auth'
 //Bootstp CSS
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import { Link } from 'react-router-dom';
+
 import {
   Nav,
   NavItem,
@@ -43,7 +45,7 @@ export function Navbar(_props) {
         <h1>HiddenGems - Oregon</h1>
       </NavbarBrand>
       <NavItem>
-        <NavLink href="#">Sign-in</NavLink>
+        <NavLink tag={Link} to='/login'>Sign-in</NavLink>
       </NavItem>
       <NavItem>
         <NavLink href="#">About Us</NavLink>
